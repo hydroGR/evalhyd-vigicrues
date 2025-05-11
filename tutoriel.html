@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tutoriel &#8212; evalhyd-vigicrues latest documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5c5a7b70" />
+    <link rel="stylesheet" type="text/css" href="_static/my_pygments_light.css?v=5045095d" />
+    <link rel="stylesheet" type="text/css" href="_static/my_pygments_dark.css?v=a5cd4274" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=f4332903"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutoriel';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hydrogr.github.io/evalhyd-vigicrues/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        </script>
+    <link rel="canonical" href="https://hydrogr.github.io/evalhyd-vigicrues/tutoriel.html" />
+    <link rel="icon" href="_static/evalhyd_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Référence API" href="api.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/evalhyd-vigicrues_logo+text.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/evalhyd-vigicrues_logo+text.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      latest  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Tutoriel
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api.html">
+                        Référence API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="licence.html">
+                        Licence
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Tutoriel
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api.html">
+                        Référence API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="licence.html">
+                        Licence
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Tutoriel</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="tutoriel">
+<h1>Tutoriel<a class="headerlink" href="#tutoriel" title="Link to this heading"><span class="fa fa-link"></a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="lire-des-donnees-d-observation">
+<h2>Lire des données d’observation<a class="headerlink" href="#lire-des-donnees-d-observation" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<section id="au-format-xml-sandre-export-hydroportail">
+<h3>Au format XML-SANDRE (export HydroPortail)<a class="headerlink" href="#au-format-xml-sandre-export-hydroportail" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.read</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_obs_from_xml_sandre</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_obs</span> <span class="o">=</span> <span class="n">read_obs_from_xml_sandre</span><span class="p">([</span><span class="s1">&#39;tutoriel/data/obs/export_hydro_series.xml&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_obs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            valeur
+entite     date_validite          
+H5201010   2010-01-01     165549.0
+           2010-01-02     183860.0
+           2010-01-03     186781.0
+           2010-01-04     165038.0
+           2010-01-05     130174.0
+...                            ...
+H507101002 2019-12-28     111972.0
+           2019-12-29     112633.0
+           2019-12-30      97809.0
+           2019-12-31      92378.0
+           2020-01-01      72622.0
+
+[18039 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="au-format-csv-export-hydroportail">
+<h3>Au format CSV (export HydroPortail)<a class="headerlink" href="#au-format-csv-export-hydroportail" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.read</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_obs_from_csv_hydroportail</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_obs</span> <span class="o">=</span> <span class="n">read_obs_from_csv_hydroportail</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;tutoriel/data/obs/K1180010_QmnH(n=1_non-glissant).csv&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;tutoriel/data/obs/K1440010_QmnH(n=1_non-glissant).csv&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_obs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                              valeur
+entite   date_validite              
+K1180010 2024-12-11 00:00:00   137.0
+         2024-12-11 01:00:00   135.0
+         2024-12-11 02:00:00   133.0
+         2024-12-11 03:00:00   132.0
+         2024-12-11 04:00:00   130.0
+...                              ...
+K1440010 2024-12-16 19:00:00   159.0
+         2024-12-16 20:00:00   166.0
+         2024-12-16 21:00:00   171.0
+         2024-12-16 22:00:00   174.0
+         2024-12-16 23:00:00   178.0
+
+[288 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="lire-des-donnees-de-prevision">
+<h2>Lire des données de prévision<a class="headerlink" href="#lire-des-donnees-de-prevision" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<section id="au-format-xml-sandre">
+<h3>Au format XML-SANDRE<a class="headerlink" href="#au-format-xml-sandre" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.read</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_prd_from_xml_sandre</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="previsions-en-scenarios">
+<h4>Prévisions en scénarios<a class="headerlink" href="#previsions-en-scenarios" title="Link to this heading"><span class="fa fa-link"></a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_prd</span> <span class="o">=</span> <span class="n">read_prd_from_xml_sandre</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;tutoriel/data/prd/GRP_B_20241211_1023_5304.xml&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_prd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                     valeur
+entite   echeance        membre date_validite              
+K0045510 0 days 01:00:00 0001   2024-12-11 11:00:00   558.0
+                         0002   2024-12-11 11:00:00   558.0
+                         0003   2024-12-11 11:00:00   558.0
+                         0004   2024-12-11 11:00:00   558.0
+                         0005   2024-12-11 11:00:00   558.0
+...                                                     ...
+K0114030 5 days 00:00:00 0046   2024-12-16 10:00:00  1644.0
+                         0047   2024-12-16 10:00:00  1645.0
+                         0048   2024-12-16 10:00:00  2973.0
+                         0049   2024-12-16 10:00:00  2294.0
+                         0050   2024-12-16 10:00:00  1644.0
+
+[12000 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="previsions-en-tendances">
+<h4>Prévisions en tendances<a class="headerlink" href="#previsions-en-tendances" title="Link to this heading"><span class="fa fa-link"></a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_prd</span> <span class="o">=</span> <span class="n">read_prd_from_xml_sandre</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;tutoriel/data/prd/Prev_E_20190103_0819_20190103_0913.xml&#39;</span><span class="p">],</span> <span class="n">seek_issue_date</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_prd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                      valeur
+entite   echeance tendance date_validite                    
+K1900010 0        moy      2019-01-03 08:00:00  82333.602905
+                  min      2019-01-03 08:00:00  81426.399231
+                  max      2019-01-03 08:00:00  84066.703796
+         1        moy      2019-01-03 09:00:00  82662.200928
+                  min      2019-01-03 09:00:00  81431.999206
+...                                                      ...
+K1440010 23       min      2019-01-04 06:00:00  56033.599854
+                  max      2019-01-04 06:00:00  59190.799713
+         24       moy      2019-01-04 07:00:00  57676.700592
+                  min      2019-01-04 07:00:00  56052.898407
+                  max      2019-01-04 07:00:00  59300.498962
+
+[1515 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="au-format-prv">
+<h3>Au format PRV<a class="headerlink" href="#au-format-prv" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.read</span><span class="w"> </span><span class="kn">import</span> <span class="n">read_prd_from_prv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id1">
+<h4>Prévisions en scénarios<a class="headerlink" href="#id1" title="Link to this heading"><span class="fa fa-link"></a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_prd</span> <span class="o">=</span> <span class="n">read_prd_from_prv</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;tutoriel/data/prd/GRP_B_20241211_1023_5304.prv&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_prd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                     valeur
+entite   echeance        membre date_validite              
+K0045510 0 days 01:00:00 0001   2024-12-11 11:00:00   0.558
+                         0002   2024-12-11 11:00:00   0.558
+                         0003   2024-12-11 11:00:00   0.558
+                         0004   2024-12-11 11:00:00   0.558
+                         0005   2024-12-11 11:00:00   0.558
+...                                                     ...
+K0673310 5 days 00:00:00 0046   2024-12-16 10:00:00   1.644
+                         0047   2024-12-16 10:00:00   1.645
+                         0048   2024-12-16 10:00:00   2.973
+                         0049   2024-12-16 10:00:00   2.294
+                         0050   2024-12-16 10:00:00   1.644
+
+[120000 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h4>Prévisions en tendances<a class="headerlink" href="#id2" title="Link to this heading"><span class="fa fa-link"></a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_prd</span> <span class="o">=</span> <span class="n">read_prd_from_prv</span><span class="p">(</span>
+    <span class="p">[</span><span class="s1">&#39;tutoriel/data/prd/Prev_E_20241211_0706_20241211_0707_5159.prv&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;tutoriel/data/prd/Prev_E_20241211_0706_20241211_0707_5166.prv&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_prd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                            valeur
+entite   echeance        tendance    date_validite                
+K1180010 0 days 01:00:00 basse_10    2024-12-11 07:00:00   96.5315
+                         centrale_50 2024-12-11 07:00:00  109.0000
+                         haute_90    2024-12-11 07:00:00  120.3889
+         0 days 02:00:00 basse_10    2024-12-11 08:00:00   95.8804
+                         centrale_50 2024-12-11 08:00:00  108.4000
+...                                                            ...
+K1440010 4 days 22:00:00 centrale_50 2024-12-16 04:00:00  201.5000
+                         haute_90    2024-12-16 04:00:00  262.3933
+         4 days 23:00:00 basse_10    2024-12-16 05:00:00  140.5569
+                         centrale_50 2024-12-16 05:00:00  201.5000
+                         haute_90    2024-12-16 05:00:00  262.3933
+
+[714 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="evaluer-des-previsions">
+<h2>Évaluer des prévisions<a class="headerlink" href="#evaluer-des-previsions" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<section id="previsions-probabilistes">
+<h3>Prévisions probabilistes<a class="headerlink" href="#previsions-probabilistes" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.evaluate</span><span class="w"> </span><span class="kn">import</span> <span class="n">evalp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id3">
+<h4>Prévisions en tendances<a class="headerlink" href="#id3" title="Link to this heading"><span class="fa fa-link"></a></h4>
+<p>Seuls certains indicateurs sont calculables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict_df_prb</span> <span class="o">=</span> <span class="n">evalp</span><span class="p">(</span>
+    <span class="n">df_obs</span><span class="o">=</span><span class="n">df_obs</span><span class="p">,</span>
+    <span class="n">df_prd</span><span class="o">=</span><span class="n">df_prd</span><span class="p">,</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;QS&#39;</span><span class="p">,</span> <span class="s1">&#39;CR&#39;</span><span class="p">,</span> <span class="s1">&#39;AW&#39;</span><span class="p">,</span> <span class="s1">&#39;AWN&#39;</span><span class="p">,</span> <span class="s1">&#39;WS&#39;</span><span class="p">,</span> <span class="s1">&#39;RANK_HIST&#39;</span><span class="p">],</span>
+    <span class="n">c_lvl</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">80</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_qs</span> <span class="o">=</span> <span class="n">dict_df_prb</span><span class="p">[</span><span class="s1">&#39;QS&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_qs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                               valeur
+entite   echeance        sous_ensemble echantillon quantile          
+K1180010 0 days 01:00:00 1             aucun       0.250     15.23425
+                                                   0.500     18.00000
+                                                   0.750      9.91665
+         0 days 02:00:00 1             aucun       0.250     15.05980
+                                                   0.500     17.60000
+...                                                               ...
+K1440010 4 days 22:00:00 1             aucun       0.500     32.50000
+                                                   0.750     46.69665
+         4 days 23:00:00 1             aucun       0.250     13.72155
+                                                   0.500     33.50000
+                                                   0.750     47.19665
+
+[714 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h4>Prévisions en scénarios<a class="headerlink" href="#id4" title="Link to this heading"><span class="fa fa-link"></a></h4>
+<p>Tous les indicateurs sont calculables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict_df_prb</span> <span class="o">=</span> <span class="n">evalp</span><span class="p">(</span>
+    <span class="n">df_obs</span><span class="o">=</span><span class="n">df_obs</span><span class="p">,</span>
+    <span class="n">df_prd</span><span class="o">=</span><span class="n">df_prd</span><span class="p">,</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CRPS_FROM_ECDF&#39;</span><span class="p">,</span> <span class="s1">&#39;QS&#39;</span><span class="p">,</span> <span class="s1">&#39;CR&#39;</span><span class="p">,</span> <span class="s1">&#39;WS&#39;</span><span class="p">,</span> <span class="s1">&#39;REL_DIAG&#39;</span><span class="p">,</span> <span class="s1">&#39;RANK_HIST&#39;</span><span class="p">],</span>
+    <span class="n">q_thr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">89240.</span><span class="p">],</span> <span class="p">[</span><span class="mf">153000.</span><span class="p">]]),</span>
+    <span class="n">events</span><span class="o">=</span><span class="s1">&#39;high&#39;</span><span class="p">,</span>
+    <span class="n">c_lvl</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">80</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_crps</span> <span class="o">=</span> <span class="n">dict_df_prb</span><span class="p">[</span><span class="s1">&#39;CRPS_FROM_ECDF&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_crps</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                       valeur
+entite   echeance        sous_ensemble echantillon           
+K1180010 0 days 01:00:00 1             aucun        13.058222
+         0 days 02:00:00 1             aucun        12.628456
+         0 days 03:00:00 1             aucun        12.691967
+         0 days 04:00:00 1             aucun        13.843389
+         0 days 05:00:00 1             aucun        14.791489
+...                                                       ...
+K1440010 4 days 19:00:00 1             aucun        23.734544
+         4 days 20:00:00 1             aucun        23.702433
+         4 days 21:00:00 1             aucun        24.036656
+         4 days 22:00:00 1             aucun        24.370533
+         4 days 23:00:00 1             aucun        24.704044
+
+[238 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="previsions-deterministes">
+<h3>Prévisions déterministes<a class="headerlink" href="#previsions-deterministes" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.evaluate</span><span class="w"> </span><span class="kn">import</span> <span class="n">evald</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il est nécessaire de travailler entité par entité pour le calcul d’indicateurs déterministes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict_df_dtm</span> <span class="o">=</span> <span class="n">evald</span><span class="p">(</span>
+    <span class="n">df_obs</span><span class="o">=</span><span class="n">df_obs</span><span class="p">,</span>
+    <span class="n">df_prd</span><span class="o">=</span><span class="n">df_prd</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;centrale_50&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;tendance&#39;</span><span class="p">),</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;KGE&#39;</span><span class="p">,</span> <span class="s1">&#39;CONT_TBL&#39;</span><span class="p">],</span>
+    <span class="n">q_thr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">89240.</span><span class="p">],</span> <span class="p">[</span><span class="mf">153000.</span><span class="p">]]),</span> <span class="n">events</span><span class="o">=</span><span class="s1">&#39;high&#39;</span><span class="p">,</span>
+    <span class="c1"># return_format=&#39;array&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_kge</span> <span class="o">=</span> <span class="n">dict_df_dtm</span><span class="p">[</span><span class="s1">&#39;KGE&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df_kge</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                    valeur
+entite   echeance        sous_ensemble echantillon        
+K1180010 0 days 01:00:00 1             aucun           NaN
+         0 days 02:00:00 1             aucun           NaN
+         0 days 03:00:00 1             aucun           NaN
+         0 days 04:00:00 1             aucun           NaN
+         0 days 05:00:00 1             aucun           NaN
+...                                                    ...
+K1440010 4 days 19:00:00 1             aucun           NaN
+         4 days 20:00:00 1             aucun           NaN
+         4 days 21:00:00 1             aucun           NaN
+         4 days 22:00:00 1             aucun           NaN
+         4 days 23:00:00 1             aucun           NaN
+
+[238 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="visualiser-des-indicateurs-de-prevision">
+<h2>Visualiser des indicateurs de prévision<a class="headerlink" href="#visualiser-des-indicateurs-de-prevision" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<section id="histogramme-de-rang">
+<h3>Histogramme de rang<a class="headerlink" href="#histogramme-de-rang" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_rank_hist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepaths_rank_hist</span> <span class="o">=</span> <span class="n">plot_rank_hist</span><span class="p">(</span><span class="n">dict_df_prb</span><span class="p">[</span><span class="s1">&#39;RANK_HIST&#39;</span><span class="p">],</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;tutoriel/figs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filepaths_rank_hist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/5c1c86efbf8f721f8933e66366a7b183c0c46fb926faef35adc86f1bf482bbdb.png"><img alt="_images/5c1c86efbf8f721f8933e66366a7b183c0c46fb926faef35adc86f1bf482bbdb.png" src="_images/5c1c86efbf8f721f8933e66366a7b183c0c46fb926faef35adc86f1bf482bbdb.png" style="width: 600px;" />
+</a>
+</div>
+</div>
+</section>
+<section id="diagramme-de-fiabilite">
+<h3>Diagramme de fiabilité<a class="headerlink" href="#diagramme-de-fiabilite" title="Link to this heading"><span class="fa fa-link"></a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">evalhyd.vigicrues.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_rel_diag</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepaths_rel_diag</span> <span class="o">=</span> <span class="n">plot_rel_diag</span><span class="p">(</span><span class="n">dict_df_prb</span><span class="p">[</span><span class="s1">&#39;REL_DIAG&#39;</span><span class="p">],</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;tutoriel/figs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filepaths_rel_diag</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/146354652856ffa83a5c4e485116f4d91e40db446af4921cc1191bbcfe68f831.png"><img alt="_images/146354652856ffa83a5c4e485116f4d91e40db446af4921cc1191bbcfe68f831.png" src="_images/146354652856ffa83a5c4e485116f4d91e40db446af4921cc1191bbcfe68f831.png" style="width: 600px;" />
+</a>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lire-des-donnees-d-observation">Lire des données d’observation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#au-format-xml-sandre-export-hydroportail">Au format XML-SANDRE (export HydroPortail)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#au-format-csv-export-hydroportail">Au format CSV (export HydroPortail)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lire-des-donnees-de-prevision">Lire des données de prévision</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#au-format-xml-sandre">Au format XML-SANDRE</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#previsions-en-scenarios">Prévisions en scénarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#previsions-en-tendances">Prévisions en tendances</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#au-format-prv">Au format PRV</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Prévisions en scénarios</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Prévisions en tendances</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluer-des-previsions">Évaluer des prévisions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#previsions-probabilistes">Prévisions probabilistes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Prévisions en tendances</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Prévisions en scénarios</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#previsions-deterministes">Prévisions déterministes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-des-indicateurs-de-prevision">Visualiser des indicateurs de prévision</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogramme-de-rang">Histogramme de rang</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-de-fiabilite">Diagramme de fiabilité</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, INRAE.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on May 10, 2025.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a class="navbar-corporate" href="https://webgr.inrae.fr/" rel="noopener" target="_blank">
+  
+  
+    <img src="_static/marianne+inrae-logo-light.svg" class="logo__image only-light" alt="Marianne+INRAE logo">
+    <img src="_static/marianne+inrae-logo-dark.svg" class="logo__image only-dark" alt="Marianne+INRAE logo">
+</a></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

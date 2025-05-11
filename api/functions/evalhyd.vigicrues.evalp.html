@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>evalhyd.vigicrues.evalp &#8212; evalhyd-vigicrues latest documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=5c5a7b70" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my_pygments_light.css?v=5045095d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my_pygments_dark.css?v=a5cd4274" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../_static/documentation_options.js?v=f4332903"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/functions/evalhyd.vigicrues.evalp';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hydrogr.github.io/evalhyd-vigicrues/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        </script>
+    <link rel="canonical" href="https://hydrogr.github.io/evalhyd-vigicrues/api/functions/evalhyd.vigicrues.evalp.html" />
+    <link rel="icon" href="../../_static/evalhyd_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="evalhyd.vigicrues.evald" href="evalhyd.vigicrues.evald.html" />
+    <link rel="prev" title="evalhyd.vigicrues.read_prd_from_prv" href="evalhyd.vigicrues.read_prd_from_prv.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/evalhyd-vigicrues_logo+text.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/evalhyd-vigicrues_logo+text.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+      <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
+      latest  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
+    <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutoriel.html">
+                        Tutoriel
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Référence API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../licence.html">
+                        Licence
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../installation.html">
+                        Installation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutoriel.html">
+                        Tutoriel
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../api.html">
+                        Référence API
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../licence.html">
+                        Licence
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.read_obs_from_xml_sandre.html">evalhyd.vigicrues.read_obs_from_xml_sandre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.read_obs_from_csv_hydroportail.html">evalhyd.vigicrues.read_obs_from_csv_hydroportail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.read_prd_from_xml_sandre.html">evalhyd.vigicrues.read_prd_from_xml_sandre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.read_prd_from_prv.html">evalhyd.vigicrues.read_prd_from_prv</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">evalhyd.vigicrues.evalp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.evald.html">evalhyd.vigicrues.evald</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.plot_rank_hist.html">evalhyd.vigicrues.plot_rank_hist</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evalhyd.vigicrues.plot_rel_diag.html">evalhyd.vigicrues.plot_rel_diag</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../api.html" class="nav-link">Référence API</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">evalhyd.vigicrues.evalp</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="evalhyd-vigicrues-evalp">
+<h1>evalhyd.vigicrues.evalp<a class="headerlink" href="#evalhyd-vigicrues-evalp" title="Link to this heading"><span class="fa fa-link"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="evalhyd.vigicrues.evalp">
+<span class="sig-name descname"><span class="pre">evalp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_obs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_prd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_thr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_lvl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_msk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_cdt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bootstrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dataframe'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#evalhyd.vigicrues.evalp" title="Link to this definition"><span class="fa fa-link"></a></dt>
+<dd><p>Fonction pour évaluer des predictions probabilistes de débits.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>La cohérence des unités pour les paramètres correspondant à des
+débits (à savoir <em>df_obs</em>, <em>df_prd</em>, <em>q_thr</em>, <em>m_cdt</em>) est de la
+responsabilité de l’utilisateur.rice. En effet, aucune
+vérification n’est effectuée par cette fonction.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>L’étendue temporelle des données d’observations fournies peut
+être plus large que celle des données de prédictions fournies :
+la fonction effectue la sélection des dates d’observations
+nécessaires pour évaluer les prédictions.</p>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt>df_obs: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></dt><dd><p>La dataframe contenant les observations de débits. Elle doit
+posséder un multi-index en lignes avec quatre niveaux nommés
+‘entites’ et ‘dates_validite’ (respectivement de types <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>
+et <code class="xref py py-obj docutils literal notranslate"><span class="pre">pd.Timestamp</span></code>) et une colonne nommée ‘valeur’ (de type
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) contenant des débits dans une unité identique à
+celle de <em>df_prd</em> et <em>q_thr</em>.
+dimensions : (entités, temps)</p>
+<p><em>Exemple de paramètre :</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df_obs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">(</span>
+        <span class="p">[[</span><span class="s1">&#39;entité 1&#39;</span><span class="p">,</span> <span class="s1">&#39;entité 2&#39;</span><span class="p">,</span> <span class="s1">&#39;entité 3&#39;</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2001-08-07&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2001-08-08&#39;</span><span class="p">)]],</span>
+        <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;entite&#39;</span><span class="p">,</span> <span class="s1">&#39;date_validite&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;valeur&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>df_prd: <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></dt><dd><p>La dataframe contenant les prédictions de débits. Elle doit
+posséder un multi-index pour les lignes avec quatre niveaux
+nommés ‘entites’, ‘echeances’, ‘membres’/’tendances’ et
+‘dates_validite’ (respectivement de types <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>,
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">pd.Timedelta</span></code>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a> et <code class="xref py py-obj docutils literal notranslate"><span class="pre">pd.Timestamp</span></code>) et une colonne
+nommée ‘valeur’ (de type <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code></a>) contenant des débits dans
+une unité identique à celle de <em>df_obs</em> et <em>q_thr</em>.
+dimensions : (entités, échéances, membres/tendances, temps)</p>
+<p><em>Exemple de paramètre :</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df_prd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">24</span><span class="p">),</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">(</span>
+        <span class="p">[[</span><span class="s1">&#39;entité 1&#39;</span><span class="p">,</span> <span class="s1">&#39;entité 2&#39;</span><span class="p">,</span> <span class="s1">&#39;entité 3&#39;</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="s1">&#39;1 day&#39;</span><span class="p">)],</span>
+         <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">],</span>
+         <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2001-08-07&#39;</span><span class="p">),</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2001-08-08&#39;</span><span class="p">)]],</span>
+        <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;entite&#39;</span><span class="p">,</span> <span class="s1">&#39;echeance&#39;</span><span class="p">,</span> <span class="s1">&#39;membre&#39;</span><span class="p">,</span> <span class="s1">&#39;date_validite&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;valeur&#39;</span><span class="p">])</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+<dt>metrics: <code class="xref py py-obj docutils literal notranslate"><span class="pre">List[str]</span></code></dt><dd><p>La liste d’indicateurs d’évaluation à calculer.
+dimensions : (indicateurs,)</p>
+</dd>
+<dt>q_thr: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('float64')]</span></code>, optionnel</dt><dd><p>La matrice 2D contenant le(s) seuil(s) de débits à
+considérer pour les indicateurs évaluant les prédictions
+de dépassement de seuils. Si le nombre de seuils diffère
+entre les entités, <a class="reference external" href="https://numpy.org/doc/stable/reference/constants.html#numpy.nan" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.nan</span></code></a> peut être utilisé comme seuil
+pour les entités ayant moins de seuils que les autres.
+dimensions : (entités, seuils)</p>
+</dd>
+<dt>events: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optionnel</dt><dd><p>Le type de dépassement de seuil à considérer pour les
+indicateurs basés sur des seuils de dépassement. Il peut
+être défini soit comme <code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;high&quot;</span></code> pour l’évaluation
+d’événements de crues (c’est-à-dire quand le débit passe
+au-dessus du seuil) soit comme <code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;low&quot;</span></code> pour l’évaluation
+d’événements d’étiages (c’est-à-dire quand le débit passe
+en-dessous du seuil). Il doit être fourni si <em>q_thr</em> est
+fourni.</p>
+</dd>
+<dt>c_lvl: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('float64')]</span></code>, optionnel</dt><dd><p>Le vecteur d’intervalle(s) de confiance en pourcents à
+considérer pour les indicateurs basés sur des intervalles.
+dimensions : (intervalles,)</p>
+</dd>
+<dt>t_msk: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('bool')]</span></code>, optionnel</dt><dd><p>La matrice 4D contenant les masques permettant des générer
+des sous-ensembles des chroniques de débits (où <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>/
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> est utilisé pour inclure/exclure les pas de temps
+dans un sous-ensemble donné). Si la matrice n’est pas
+fournie et <em>m_cdt</em> n’est pas fournie non plus, aucun
+sous-ensemble n’est produit et un seul jeu d’indicateurs
+correspondant à la période entière est généré. Si la
+matrice est fournie, autant de jeux d’indicateurs que de
+masques fournis sont générés.
+dimensions : (entités, échéances, sous-ensembles, temps)</p>
+</dd>
+<dt>m_cdt: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('|S32')]</span></code>, optionnel</dt><dd><p>La matrice 2D contenant les conditions permettant de
+générer des sous-ensembles temporels. Chaque condition
+consiste en une chaîne de caractères et elle peut être
+spécifiée sur des valeurs débits observés ou prédits
+(moyenne, médiane, quantile) ou sur des indices temporels.
+Si la matrice est fournie et <em>t_msk</em> est également fourni,
+ce dernier est prioritaire et la matrice sera ignorée.
+Si la matrice n’est pas fournie et <em>t_msk</em> n’est pas fourni
+non plus, aucun sous-ensemble n’est produit et un seul jeu
+d’indicateurs correspondant à la période entière est généré.
+Si la matrice est fournie seule, autant de jeux
+d’indicateurs que de conditions fournies sont générés.
+dimensions : (entités, sous-ensembles)</p>
+</dd>
+<dt>bootstrap: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a>, optionnel</dt><dd><p>Les valeurs des paramètres pour la méthode de bootstrap
+utilisée pour estimer l’incertitude d’échantillonnage dans
+l’évaluation des prédictions. Les trois paramètres sont :
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;n_samples&quot;</span></code> le nombre d’échantillons aléatoires,
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;len_samples&quot;</span></code> la longueur d’un échantillon en nombre
+d’années et <code class="xref py py-obj docutils literal notranslate"><span class="pre">&quot;summary&quot;</span></code> les statistiques à calculer pour
+caractériser la distribution d’échantillonnage. Si les
+valeurs ne sont pas fournies, aucun bootstrap n’est
+effectué.</p>
+<p><em>Exemple de paramètre :</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bootstrap</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;n_samples&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;len_sample&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;summary&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt>seed: <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optionnel</dt><dd><p>Un nombre entier pour la graine utilisée par le générateur
+pseudo-aléatoire. Ce paramètre garanti la reproductibilité
+des valeurs d’indicateurs entre appels à la fonction.</p>
+</dd>
+<dt>diagnostics: <code class="xref py py-obj docutils literal notranslate"><span class="pre">List[str]</span></code>, optionnel</dt><dd><p>La liste de variables de diagnostic de l’évaluation à
+calculer.
+dimensions : (variables,)</p>
+</dd>
+<dt>return_format: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optionnel</dt><dd><p>Le format désiré pour les indicateurs d’évaluation, soit
+<code class="docutils literal notranslate"><span class="pre">'dataframe'</span></code> pour obtenir des <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> ou
+<code class="docutils literal notranslate"><span class="pre">'array'</span></code> pour obtenir des <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>. Si le format
+n’est pas fourni, des dataframes sont retournées.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Retourne<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> de <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> ou de <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>Les valeurs des indicateurs d’évaluation (et des variables
+de diagnostic d’évaluation le cas échéant).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour les indicateurs avec dimensions tels que le CRPS ou
+le QS, l’unité de l’indicateur est identique à l’unité
+des données fournies à <em>df_obs</em>, <em>df_prd</em> et <em>q_thr</em>.</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evalhyd.vigicrues.evalp"><code class="docutils literal notranslate"><span class="pre">evalp</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, INRAE.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on May 10, 2025.
+  <br/>
+</p></div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a class="navbar-corporate" href="https://webgr.inrae.fr/" rel="noopener" target="_blank">
+  
+  
+    <img src="../../_static/marianne+inrae-logo-light.svg" class="logo__image only-light" alt="Marianne+INRAE logo">
+    <img src="../../_static/marianne+inrae-logo-dark.svg" class="logo__image only-dark" alt="Marianne+INRAE logo">
+</a></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
