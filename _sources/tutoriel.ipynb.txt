@@ -1,75 +1,85 @@
 {
  "cells": [
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "# Tutoriel",
-   "id": "3503483f9b9aa943"
+   "id": "3503483f9b9aa943",
+   "metadata": {},
+   "source": [
+    "# Tutoriel"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "cd1b47759cfca340",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:20.378763Z",
      "start_time": "2025-04-10T11:37:19.987677Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "import numpy as np\n",
     "import pandas as pd"
-   ],
-   "id": "cd1b47759cfca340",
-   "outputs": [],
-   "execution_count": 1
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "## Lire des données d'observation",
-   "id": "ce220cba53b2f119"
-  },
-  {
+   "id": "ce220cba53b2f119",
    "metadata": {},
-   "cell_type": "markdown",
-   "source": "### Au format XML-SANDRE (export HydroPortail)",
-   "id": "8996a00f67b66486"
+   "source": [
+    "## Lire des données d'observation"
+   ]
   },
   {
+   "cell_type": "markdown",
+   "id": "8996a00f67b66486",
+   "metadata": {},
+   "source": [
+    "### Au format XML-SANDRE (export HydroPortail)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "5f78fdde5589a259",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:20.746952Z",
      "start_time": "2025-04-10T11:37:20.378763Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.read import read_obs_from_xml_sandre",
-   "id": "5f78fdde5589a259",
    "outputs": [],
-   "execution_count": 2
+   "source": [
+    "from evalhyd.vigicrues.read import read_obs_from_xml_sandre"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "5e0c1d9916ef619e",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.449874Z",
      "start_time": "2025-04-10T11:37:20.937739Z"
     }
    },
-   "cell_type": "code",
-   "source": "df_obs = read_obs_from_xml_sandre(['tutoriel/data/obs/export_hydro_series.xml'])",
-   "id": "5e0c1d9916ef619e",
    "outputs": [],
-   "execution_count": 3
+   "source": [
+    "df_obs = read_obs_from_xml_sandre(['tutoriel/data/obs/export_hydro_series.xml'])"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "92d5ce4bd7f5fb26",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.467474Z",
      "start_time": "2025-04-10T11:37:21.462493Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_obs)",
-   "id": "92d5ce4bd7f5fb26",
    "outputs": [
     {
      "name": "stdout",
@@ -93,55 +103,61 @@
      ]
     }
    ],
-   "execution_count": 4
+   "source": [
+    "print(df_obs)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "### Au format CSV (export HydroPortail)",
-   "id": "49e3eb6c57f97b9f"
+   "id": "49e3eb6c57f97b9f",
+   "metadata": {},
+   "source": [
+    "### Au format CSV (export HydroPortail)"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f761f1852fbf5a49",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.482180Z",
      "start_time": "2025-04-10T11:37:21.472094Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.read import read_obs_from_csv_hydroportail",
-   "id": "f761f1852fbf5a49",
    "outputs": [],
-   "execution_count": 5
+   "source": [
+    "from evalhyd.vigicrues.read import read_obs_from_csv_hydroportail"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "d934d9eefb64b9fc",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.500655Z",
      "start_time": "2025-04-10T11:37:21.487438Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "df_obs = read_obs_from_csv_hydroportail(\n",
     "    ['tutoriel/data/obs/K1180010_QmnH(n=1_non-glissant).csv',\n",
     "     'tutoriel/data/obs/K1440010_QmnH(n=1_non-glissant).csv']\n",
     ")"
-   ],
-   "id": "d934d9eefb64b9fc",
-   "outputs": [],
-   "execution_count": 6
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "e62751918562f791",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.509948Z",
      "start_time": "2025-04-10T11:37:21.505332Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_obs)",
-   "id": "e62751918562f791",
    "outputs": [
     {
      "name": "stdout",
@@ -165,67 +181,77 @@
      ]
     }
    ],
-   "execution_count": 7
+   "source": [
+    "print(df_obs)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "## Lire des données de prévision",
-   "id": "c31c6079b9a2b3f1"
-  },
-  {
+   "id": "c31c6079b9a2b3f1",
    "metadata": {},
-   "cell_type": "markdown",
-   "source": "### Au format XML-SANDRE",
-   "id": "9ecb3970dca33821"
+   "source": [
+    "## Lire des données de prévision"
+   ]
   },
   {
+   "cell_type": "markdown",
+   "id": "9ecb3970dca33821",
+   "metadata": {},
+   "source": [
+    "### Au format XML-SANDRE"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "initial_id",
    "metadata": {
-    "collapsed": true,
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.522003Z",
      "start_time": "2025-04-10T11:37:21.514726Z"
-    }
+    },
+    "collapsed": true
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.read import read_prd_from_xml_sandre",
-   "id": "initial_id",
    "outputs": [],
-   "execution_count": 8
+   "source": [
+    "from evalhyd.vigicrues.read import read_prd_from_xml_sandre"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "#### Prévisions en scénarios",
-   "id": "ba8aa10d8b610336"
+   "id": "ba8aa10d8b610336",
+   "metadata": {},
+   "source": [
+    "#### Prévisions en scénarios"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "dcd586364713d880",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.700781Z",
      "start_time": "2025-04-10T11:37:21.530349Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "df_prd = read_prd_from_xml_sandre(\n",
     "    ['tutoriel/data/prd/GRP_B_20241211_1023_5304.xml']\n",
     ")"
-   ],
-   "id": "dcd586364713d880",
-   "outputs": [],
-   "execution_count": 9
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "f2009eec55131e40",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.715187Z",
      "start_time": "2025-04-10T11:37:21.708216Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_prd)",
-   "id": "f2009eec55131e40",
    "outputs": [
     {
      "name": "stdout",
@@ -249,41 +275,45 @@
      ]
     }
    ],
-   "execution_count": 10
+   "source": [
+    "print(df_prd)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "#### Prévisions en tendances",
-   "id": "3071837e9d9f8896"
+   "id": "3071837e9d9f8896",
+   "metadata": {},
+   "source": [
+    "#### Prévisions en tendances"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "f12ed3c5268910cf",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.801371Z",
      "start_time": "2025-04-10T11:37:21.726150Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "df_prd = read_prd_from_xml_sandre(\n",
     "    ['tutoriel/data/prd/Prev_E_20190103_0819_20190103_0913.xml'], seek_issue_date=False\n",
     ")"
-   ],
-   "id": "f12ed3c5268910cf",
-   "outputs": [],
-   "execution_count": 11
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "d7e382033ac86737",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.815629Z",
      "start_time": "2025-04-10T11:37:21.811768Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_prd)",
-   "id": "d7e382033ac86737",
    "outputs": [
     {
      "name": "stdout",
@@ -307,60 +337,68 @@
      ]
     }
    ],
-   "execution_count": 12
+   "source": [
+    "print(df_prd)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "### Au format PRV",
-   "id": "1bc22e5a2d9162c4"
+   "id": "1bc22e5a2d9162c4",
+   "metadata": {},
+   "source": [
+    "### Au format PRV"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "3ffe88a22df3cd35",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.845425Z",
      "start_time": "2025-04-10T11:37:21.843220Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.read import read_prd_from_prv",
-   "id": "3ffe88a22df3cd35",
    "outputs": [],
-   "execution_count": 13
+   "source": [
+    "from evalhyd.vigicrues.read import read_prd_from_prv"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "#### Prévisions en scénarios",
-   "id": "4cc1bea319999514"
+   "id": "4cc1bea319999514",
+   "metadata": {},
+   "source": [
+    "#### Prévisions en scénarios"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "1ca93d523b0661c5",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.972871Z",
      "start_time": "2025-04-10T11:37:21.847432Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "df_prd = read_prd_from_prv(\n",
     "    ['tutoriel/data/prd/GRP_B_20241211_1023_5304.prv']\n",
     ")"
-   ],
-   "id": "1ca93d523b0661c5",
-   "outputs": [],
-   "execution_count": 14
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "941b5e7682e30525",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:21.984272Z",
      "start_time": "2025-04-10T11:37:21.978816Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_prd)",
-   "id": "941b5e7682e30525",
    "outputs": [
     {
      "name": "stdout",
@@ -384,42 +422,46 @@
      ]
     }
    ],
-   "execution_count": 15
+   "source": [
+    "print(df_prd)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "#### Prévisions en tendances",
-   "id": "6ab772d803add4b5"
+   "id": "6ab772d803add4b5",
+   "metadata": {},
+   "source": [
+    "#### Prévisions en tendances"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "f98aa6cf2e156940",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.006796Z",
      "start_time": "2025-04-10T11:37:21.992020Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "df_prd = read_prd_from_prv(\n",
     "    ['tutoriel/data/prd/Prev_E_20241211_0706_20241211_0707_5159.prv',\n",
     "     'tutoriel/data/prd/Prev_E_20241211_0706_20241211_0707_5166.prv']\n",
     ")"
-   ],
-   "id": "f98aa6cf2e156940",
-   "outputs": [],
-   "execution_count": 16
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "edc832b700d44ae7",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.018538Z",
      "start_time": "2025-04-10T11:37:22.013753Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_prd)",
-   "id": "edc832b700d44ae7",
    "outputs": [
     {
      "name": "stdout",
@@ -443,51 +485,62 @@
      ]
     }
    ],
-   "execution_count": 17
+   "source": [
+    "print(df_prd)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "## Évaluer des prévisions",
-   "id": "10970a3ebbf98945"
-  },
-  {
+   "id": "10970a3ebbf98945",
    "metadata": {},
-   "cell_type": "markdown",
-   "source": "### Prévisions probabilistes",
-   "id": "6b4ee7c94fe4998a"
+   "source": [
+    "## Évaluer des prévisions"
+   ]
   },
   {
+   "cell_type": "markdown",
+   "id": "6b4ee7c94fe4998a",
+   "metadata": {},
+   "source": [
+    "### Prévisions probabilistes"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "d7857456a61f64f3",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.029620Z",
      "start_time": "2025-04-10T11:37:22.026957Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.evaluate import evalp",
-   "id": "d7857456a61f64f3",
    "outputs": [],
-   "execution_count": 18
+   "source": [
+    "from evalhyd.vigicrues.evaluate import evalp"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
+   "id": "5672d849fab9ab9",
+   "metadata": {},
    "source": [
     "#### Prévisions en tendances\n",
     "\n",
     "Seuls certains indicateurs sont calculables."
-   ],
-   "id": "5672d849fab9ab9"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "659cb09b283f647d",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.177136Z",
      "start_time": "2025-04-10T11:37:22.035583Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "dict_df_prb = evalp(\n",
     "    df_obs=df_obs,\n",
@@ -495,34 +548,33 @@
     "    metrics=['QS', 'CR', 'AW', 'AWN', 'WS', 'RANK_HIST'],\n",
     "    c_lvl=np.array([80])\n",
     ")"
-   ],
-   "id": "659cb09b283f647d",
-   "outputs": [],
-   "execution_count": 19
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "2404a3e8ddf029ff",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.200514Z",
      "start_time": "2025-04-10T11:37:22.197526Z"
     }
    },
-   "cell_type": "code",
-   "source": "df_qs = dict_df_prb['QS']",
-   "id": "2404a3e8ddf029ff",
    "outputs": [],
-   "execution_count": 20
+   "source": [
+    "df_qs = dict_df_prb['QS']"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "412ac17fd92d109b",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.207530Z",
      "start_time": "2025-04-10T11:37:22.200514Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_qs)",
-   "id": "412ac17fd92d109b",
    "outputs": [
     {
      "name": "stdout",
@@ -546,26 +598,31 @@
      ]
     }
    ],
-   "execution_count": 21
+   "source": [
+    "print(df_qs)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
+   "id": "3f281768f7c4882",
+   "metadata": {},
    "source": [
     "#### Prévisions en scénarios\n",
     "\n",
     "Tous les indicateurs sont calculables."
-   ],
-   "id": "3f281768f7c4882"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "f81e78ee428d95d0",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.303883Z",
      "start_time": "2025-04-10T11:37:22.219022Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "dict_df_prb = evalp(\n",
     "    df_obs=df_obs,\n",
@@ -575,34 +632,33 @@
     "    events='high',\n",
     "    c_lvl=np.array([80])\n",
     ")"
-   ],
-   "id": "f81e78ee428d95d0",
-   "outputs": [],
-   "execution_count": 22
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "4fcfa3a22793b96c",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.317848Z",
      "start_time": "2025-04-10T11:37:22.313904Z"
     }
    },
-   "cell_type": "code",
-   "source": "df_crps = dict_df_prb['CRPS_FROM_ECDF']",
-   "id": "4fcfa3a22793b96c",
    "outputs": [],
-   "execution_count": 23
+   "source": [
+    "df_crps = dict_df_prb['CRPS_FROM_ECDF']"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "fa9d075aa6a8c206",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.338306Z",
      "start_time": "2025-04-10T11:37:22.329690Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_crps)",
-   "id": "fa9d075aa6a8c206",
    "outputs": [
     {
      "name": "stdout",
@@ -626,77 +682,86 @@
      ]
     }
    ],
-   "execution_count": 24
+   "source": [
+    "print(df_crps)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "### Prévisions déterministes",
-   "id": "26e4ee831c421239"
+   "id": "26e4ee831c421239",
+   "metadata": {},
+   "source": [
+    "### Prévisions déterministes"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "4aa542fc53b2f45c",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.415235Z",
      "start_time": "2025-04-10T11:37:22.399073Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.evaluate import evald",
-   "id": "4aa542fc53b2f45c",
    "outputs": [],
-   "execution_count": 25
+   "source": [
+    "from evalhyd.vigicrues.evaluate import evald"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "Il est nécessaire de travailler entité par entité pour le calcul d'indicateurs déterministes.",
-   "id": "d9687e1dffbca244"
+   "id": "d9687e1dffbca244",
+   "metadata": {},
+   "source": [
+    "Il est nécessaire de travailler entité par entité pour le calcul d'indicateurs déterministes."
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "26e547cd7d9413a7",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.574441Z",
      "start_time": "2025-04-10T11:37:22.477446Z"
     }
    },
-   "cell_type": "code",
+   "outputs": [],
    "source": [
     "dict_df_dtm = evald(\n",
     "    df_obs=df_obs,\n",
     "    df_prd=df_prd.xs('centrale_50', level='tendance'),\n",
     "    metrics=['KGE', 'CONT_TBL'],\n",
-    "    q_thr=np.array([[89240.], [153000.]]), events='high',\n",
-    "    # return_format='array'\n",
+    "    q_thr=np.array([[89240.], [153000.]]), events='high'\n",
     ")"
-   ],
-   "id": "26e547cd7d9413a7",
-   "outputs": [],
-   "execution_count": 26
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "31cf188a36fb63ae",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.584961Z",
      "start_time": "2025-04-10T11:37:22.580442Z"
     }
    },
-   "cell_type": "code",
-   "source": "df_kge = dict_df_dtm['KGE']",
-   "id": "31cf188a36fb63ae",
    "outputs": [],
-   "execution_count": 27
+   "source": [
+    "df_kge = dict_df_dtm['KGE']"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "a65c79fd0baf526d",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.628240Z",
      "start_time": "2025-04-10T11:37:22.620543Z"
     }
    },
-   "cell_type": "code",
-   "source": "print(df_kge)",
-   "id": "a65c79fd0baf526d",
    "outputs": [
     {
      "name": "stdout",
@@ -720,59 +785,66 @@
      ]
     }
    ],
-   "execution_count": 28
+   "source": [
+    "print(df_kge)"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "## Visualiser des indicateurs de prévision",
-   "id": "fe40e315887c93b5"
-  },
-  {
+   "id": "fe40e315887c93b5",
    "metadata": {},
-   "cell_type": "markdown",
-   "source": "### Histogramme de rang",
-   "id": "5704f16f178affb0"
+   "source": [
+    "## Visualiser des indicateurs de prévision"
+   ]
   },
   {
+   "cell_type": "markdown",
+   "id": "5704f16f178affb0",
+   "metadata": {},
+   "source": [
+    "### Histogramme de rang"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "d44e9f7fe2450b94",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:37:22.643906Z",
      "start_time": "2025-04-10T11:37:22.631192Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.plot import plot_rank_hist",
-   "id": "d44e9f7fe2450b94",
    "outputs": [],
-   "execution_count": 29
+   "source": [
+    "from evalhyd.vigicrues.plot import plot_rank_hist"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "5930e57942e8ed8b",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:38:09.283400Z",
      "start_time": "2025-04-10T11:37:22.658044Z"
     }
    },
-   "cell_type": "code",
-   "source": "filepaths_rank_hist = plot_rank_hist(dict_df_prb['RANK_HIST'], output_dir='tutoriel/figs')",
-   "id": "5930e57942e8ed8b",
    "outputs": [],
-   "execution_count": 30
+   "source": [
+    "filepaths_rank_hist = plot_rank_hist(dict_df_prb['RANK_HIST'], output_dir='tutoriel/figs')"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "4cca5e37102ca7b6",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:38:09.322308Z",
      "start_time": "2025-04-10T11:38:09.314972Z"
     }
    },
-   "cell_type": "code",
-   "source": [
-    "from IPython.display import Image\n",
-    "Image(filepaths_rank_hist[0])"
-   ],
-   "id": "4cca5e37102ca7b6",
    "outputs": [
     {
      "data": {
@@ -786,53 +858,59 @@
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 31
+   "source": [
+    "from IPython.display import Image\n",
+    "Image(filepaths_rank_hist[0])"
+   ]
   },
   {
-   "metadata": {},
    "cell_type": "markdown",
-   "source": "### Diagramme de fiabilité",
-   "id": "c42aefa48420d57e"
+   "id": "c42aefa48420d57e",
+   "metadata": {},
+   "source": [
+    "### Diagramme de fiabilité"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "6fad1a5aa0407891",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:38:09.351660Z",
      "start_time": "2025-04-10T11:38:09.347120Z"
     }
    },
-   "cell_type": "code",
-   "source": "from evalhyd.vigicrues.plot import plot_rel_diag",
-   "id": "6fad1a5aa0407891",
    "outputs": [],
-   "execution_count": 32
+   "source": [
+    "from evalhyd.vigicrues.plot import plot_rel_diag"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "9b79791d6aeef50c",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:39:27.240854Z",
      "start_time": "2025-04-10T11:38:09.375073Z"
     }
    },
-   "cell_type": "code",
-   "source": "filepaths_rel_diag = plot_rel_diag(dict_df_prb['REL_DIAG'], output_dir='tutoriel/figs')",
-   "id": "9b79791d6aeef50c",
    "outputs": [],
-   "execution_count": 33
+   "source": [
+    "filepaths_rel_diag = plot_rel_diag(dict_df_prb['REL_DIAG'], output_dir='tutoriel/figs')"
+   ]
   },
   {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "eab6b7a085601f6d",
    "metadata": {
     "ExecuteTime": {
      "end_time": "2025-04-10T11:39:27.324515Z",
      "start_time": "2025-04-10T11:39:27.293957Z"
     }
    },
-   "cell_type": "code",
-   "source": [
-    "from IPython.display import Image\n",
-    "Image(filepaths_rel_diag[0])"
-   ],
-   "id": "eab6b7a085601f6d",
    "outputs": [
     {
      "data": {
@@ -846,7 +924,10 @@
      "output_type": "execute_result"
     }
    ],
-   "execution_count": 34
+   "source": [
+    "from IPython.display import Image\n",
+    "Image(filepaths_rel_diag[0])"
+   ]
   }
  ],
  "metadata": {

@@ -29,9 +29,9 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=5c5a7b70" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=854e3872" />
     <link rel="stylesheet" type="text/css" href="_static/my_pygments_light.css?v=5045095d" />
     <link rel="stylesheet" type="text/css" href="_static/my_pygments_dark.css?v=a5cd4274" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
@@ -47,7 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hydrogr.github.io/evalhyd-vigicrues/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.1.0-beta';
         </script>
     <link rel="canonical" href="https://hydrogr.github.io/evalhyd-vigicrues/api.html" />
     <link rel="icon" href="_static/evalhyd_favicon.ico"/>
@@ -131,7 +131,7 @@
 document.write(`
   <div class="version-switcher__container dropdown">
     <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
-      latest  <!-- this text may get changed later by javascript -->
+      v0.1.0-beta  <!-- this text may get changed later by javascript -->
       <span class="caret"></span>
     </button>
     <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
@@ -419,6 +419,7 @@ document.write(`
 <h1>Référence API<a class="headerlink" href="#reference-api" title="Link to this heading"><span class="fa fa-link"></a></h1>
 <section id="lecture">
 <h2>Lecture<a class="headerlink" href="#lecture" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<div class="docutils container">
 <table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="api/functions/evalhyd.vigicrues.read_obs_from_xml_sandre.html#evalhyd.vigicrues.read_obs_from_xml_sandre" title="evalhyd.vigicrues.read_obs_from_xml_sandre"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_obs_from_xml_sandre</span></code></a>(xml_files)</p></td>
@@ -435,9 +436,13 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
+<div class="docutils container">
+</div>
 </section>
 <section id="evaluation">
 <h2>Évaluation<a class="headerlink" href="#evaluation" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<div class="docutils container">
 <table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="api/functions/evalhyd.vigicrues.evalp.html#evalhyd.vigicrues.evalp" title="evalhyd.vigicrues.evalp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evalp</span></code></a>(df_obs, df_prd, metrics[, q_thr, ...])</p></td>
@@ -448,9 +453,13 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
+<div class="docutils container">
+</div>
 </section>
 <section id="visualisation">
 <h2>Visualisation<a class="headerlink" href="#visualisation" title="Link to this heading"><span class="fa fa-link"></a></h2>
+<div class="docutils container">
 <table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="api/functions/evalhyd.vigicrues.plot_rank_hist.html#evalhyd.vigicrues.plot_rank_hist" title="evalhyd.vigicrues.plot_rank_hist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_rank_hist</span></code></a>(rank_hist[, row, col, ...])</p></td>
@@ -461,6 +470,9 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
+<div class="docutils container">
+</div>
 </section>
 </section>
 
@@ -525,7 +537,7 @@ document.write(`
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on May 10, 2025.
+  Last updated on Jun 03, 2025.
   <br/>
 </p></div>
       

@@ -29,9 +29,9 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=5c5a7b70" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=854e3872" />
     <link rel="stylesheet" type="text/css" href="../../_static/my_pygments_light.css?v=5045095d" />
     <link rel="stylesheet" type="text/css" href="../../_static/my_pygments_dark.css?v=a5cd4274" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
@@ -47,7 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/functions/evalhyd.vigicrues.read_prd_from_prv';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hydrogr.github.io/evalhyd-vigicrues/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.1.0-beta';
         </script>
     <link rel="canonical" href="https://hydrogr.github.io/evalhyd-vigicrues/api/functions/evalhyd.vigicrues.read_prd_from_prv.html" />
     <link rel="icon" href="../../_static/evalhyd_favicon.ico"/>
@@ -131,7 +131,7 @@
 document.write(`
   <div class="version-switcher__container dropdown">
     <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
-      latest  <!-- this text may get changed later by javascript -->
+      v0.1.0-beta  <!-- this text may get changed later by javascript -->
       <span class="caret"></span>
     </button>
     <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
@@ -443,20 +443,21 @@ de débits.</p>
 <p><strong>Exemples</strong></p>
 <p>Récupérer les prédictions de débits sous forme de dataframe :</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">read_prd_from_prv</span><span class="p">([</span><span class="s1">&#39;data/GRP_B_20241211_1023_5304.prv&#39;</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;K0045510&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;entites&#39;</span><span class="p">,</span> <span class="n">drop_level</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;0001&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;membres&#39;</span><span class="p">,</span> <span class="n">drop_level</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="go">                                                      valeur</span>
-<span class="go">entite   echeance        membre  date_validite</span>
-<span class="go">K0045510 0 days 01:00:00 0001    2024-12-11 11:00:00   0.558</span>
-<span class="go">         0 days 02:00:00 0001    2024-12-11 12:00:00   0.553</span>
-<span class="go">         0 days 03:00:00 0001    2024-12-11 13:00:00   0.547</span>
-<span class="go">         0 days 04:00:00 0001    2024-12-11 14:00:00   0.541</span>
-<span class="go">         0 days 05:00:00 0001    2024-12-11 15:00:00   0.535</span>
-<span class="go">...                                                      ...</span>
-<span class="go">         4 days 20:00:00 0001    2024-12-16 06:00:00   0.922</span>
-<span class="go">         4 days 21:00:00 0001    2024-12-16 07:00:00   0.904</span>
-<span class="go">         4 days 22:00:00 0001    2024-12-16 08:00:00   0.886</span>
-<span class="go">         4 days 23:00:00 0001    2024-12-16 09:00:00   0.869</span>
-<span class="go">         5 days 00:00:00 0001    2024-12-16 10:00:00   0.852</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;K0045510&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;entite&#39;</span><span class="p">,</span> <span class="n">drop_level</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;0001&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="s1">&#39;membre&#39;</span><span class="p">,</span> <span class="n">drop_level</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">                                                     valeur</span>
+<span class="go">entite   echeance        membre date_validite</span>
+<span class="go">K0045510 0 days 01:00:00 0001   2024-12-11 11:00:00   0.558</span>
+<span class="go">         0 days 02:00:00 0001   2024-12-11 12:00:00   0.553</span>
+<span class="go">         0 days 03:00:00 0001   2024-12-11 13:00:00   0.547</span>
+<span class="go">         0 days 04:00:00 0001   2024-12-11 14:00:00   0.541</span>
+<span class="go">         0 days 05:00:00 0001   2024-12-11 15:00:00   0.535</span>
+<span class="go">...                                                     ...</span>
+<span class="go">         4 days 20:00:00 0001   2024-12-16 06:00:00   0.922</span>
+<span class="go">         4 days 21:00:00 0001   2024-12-16 07:00:00   0.904</span>
+<span class="go">         4 days 22:00:00 0001   2024-12-16 08:00:00   0.886</span>
+<span class="go">         4 days 23:00:00 0001   2024-12-16 09:00:00   0.869</span>
+<span class="go">         5 days 00:00:00 0001   2024-12-16 10:00:00   0.852</span>
+
 <span class="go">[120 rows x 1 columns]</span>
 </pre></div>
 </div>
@@ -523,7 +524,7 @@ de débits.</p>
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on May 10, 2025.
+  Last updated on Jun 03, 2025.
   <br/>
 </p></div>
       
