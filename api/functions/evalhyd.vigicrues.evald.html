@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=854e3872" />
     <link rel="stylesheet" type="text/css" href="../../_static/my_pygments_light.css?v=5045095d" />
@@ -487,8 +487,12 @@ dimensions : (entités, échéances, temps)</p>
 </dd>
 <dt>metrics: <code class="xref py py-obj docutils literal notranslate"><span class="pre">List[str]</span></code></dt><dd><p>La liste d’indicateurs d’évaluation à calculer.
 dimensions : (indicateurs,)</p>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><a class="reference external" href="https://hydrogr.github.io/evalhyd/metrics/deterministic.html">Indicateurs déterministes</a></p>
+</div>
 </dd>
-<dt>q_thr: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('float64')]</span></code>, optionnel</dt><dd><p>Le vecteur contenant le(s) seuil(s) de débits à considérer
+<dt>q_thr: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('float64')]</span></code>, optionnel</dt><dd><p>Le vecteur contenant le(s) seuil(s) de débits à considérer
 pour les indicateurs évaluant les prédictions de dépassement
 de seuils.
 dimensions : (entités, seuils)</p>
@@ -502,7 +506,7 @@ d’événements d’étiages (c’est-à-dire quand le débit passe
 en-dessous du seuil). Il doit être fourni si <em>q_thr</em> est
 fourni.</p>
 </dd>
-<dt>t_msk: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('bool')]</span></code>, optionnel</dt><dd><p>La matrice 2D contenant les masques permettant des générer
+<dt>t_msk: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('bool')]</span></code>, optionnel</dt><dd><p>La matrice 2D contenant les masques permettant des générer
 des sous-ensembles des chroniques de débits (où <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">True</span></code></a>/
 <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">False</span></code></a> est utilisé pour inclure/exclure les pas de temps
 dans un sous-ensemble donné). Si la matrice n’est pas
@@ -513,7 +517,7 @@ matrice est fournie, autant de jeux d’indicateurs que de
 masques fournis sont générés.
 dimensions : (entités, sous-ensembles, temps)</p>
 </dd>
-<dt>m_cdt: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('|S32')]</span></code>, optionnel</dt><dd><p>Le vecteur contenant les conditions permettant de
+<dt>m_cdt: <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> <code class="docutils literal notranslate"><span class="pre">[dtype('|S32')]</span></code>, optionnel</dt><dd><p>Le vecteur contenant les conditions permettant de
 générer des sous-ensembles temporels. Chaque condition
 consiste en une chaîne de caractères et elle peut être
 spécifiée sur des valeurs débits observés ou prédits
@@ -551,14 +555,14 @@ dimensions : (variables,)</p>
 </dd>
 <dt>return_format: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>, optionnel</dt><dd><p>Le format désiré pour les indicateurs d’évaluation, soit
 <code class="docutils literal notranslate"><span class="pre">'dataframe'</span></code> pour obtenir des <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> ou
-<code class="docutils literal notranslate"><span class="pre">'array'</span></code> pour obtenir des <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>. Si le format
+<code class="docutils literal notranslate"><span class="pre">'array'</span></code> pour obtenir des <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>. Si le format
 n’est pas fourni, des dataframes sont retournées.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Retourne<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> de <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> ou de <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>Les valeurs des indicateurs d’évaluation (et des variables
+<dt><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> de <code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> ou de <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></dt><dd><p>Les valeurs des indicateurs d’évaluation (et des variables
 de diagnostic d’évaluation le cas échéant).</p>
 </dd>
 </dl>
@@ -627,7 +631,7 @@ de diagnostic d’évaluation le cas échéant).</p>
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Jun 03, 2025.
+  Last updated on Jun 24, 2025.
   <br/>
 </p></div>
       
