@@ -4,9 +4,9 @@ Installation
 Il est recommandé d'installer certaines dépendances au préalable :
 
 .. code-block:: console
-   :caption: Installer ``evalhyd`` avec `conda`
+   :caption: Installer ``evalhyd`` avec `pip`
 
-   $ conda install -c conda-forge evalhyd-python
+   $ pip install evalhyd-python
 
 .. code-block:: console
    :caption: Installer ``libhydro`` avec `pip`
@@ -18,4 +18,4 @@ Il est ensuite possible d'installer `evalhyd-vigicrues` et ses autres dépendanc
 .. code-block:: console
    :caption: Installer ``evalhyd-vigicrues`` avec `pip`
 
-   $ pip install git+https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd/evalhyd-vigicrues
+   $ pip install git+https://forge.inrae.fr/hydroGR/evalhyd/evalhyd-vigicrues

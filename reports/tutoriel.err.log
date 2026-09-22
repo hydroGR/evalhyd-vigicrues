@@ -25,217 +25,64 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-dict_df_prb = evalp(
-    df_obs=df_obs,
-    df_prd=df_prd,
-    metrics=['QS', 'CR', 'AW', 'AWN', 'WS', 'RANK_HIST'],
-    c_lvl=np.array([80])
+df_prd = read_prd_from_xml_sandre(
+    ['tutoriel/data/prd/Prev_E_20190103_0819_20190103_0913.xml'], seek_issue_date=False
 )
 ------------------
 
 
 [31m---------------------------------------------------------------------------[39m
-[31mTypeError[39m                                 Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[19][39m[32m, line 1[39m
-[32m----> [39m[32m1[39m dict_df_prb = [43mevalp[49m[43m([49m
-[32m      2[39m [43m    [49m[43mdf_obs[49m[43m=[49m[43mdf_obs[49m[43m,[49m
-[32m      3[39m [43m    [49m[43mdf_prd[49m[43m=[49m[43mdf_prd[49m[43m,[49m
-[32m      4[39m [43m    [49m[43mmetrics[49m[43m=[49m[43m[[49m[33;43m'[39;49m[33;43mQS[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mCR[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mAW[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mAWN[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mWS[39;49m[33;43m'[39;49m[43m,[49m[43m [49m[33;43m'[39;49m[33;43mRANK_HIST[39;49m[33;43m'[39;49m[43m][49m[43m,[49m
-[32m      5[39m [43m    [49m[43mc_lvl[49m[43m=[49m[43mnp[49m[43m.[49m[43marray[49m[43m([49m[43m[[49m[32;43m80[39;49m[43m][49m[43m)[49m
-[32m      6[39m [43m)[49m
+[31mVersionError[39m                              Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[11][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m df_prd = [43mread_prd_from_xml_sandre[49m[43m([49m
+[32m      2[39m [43m    [49m[43m[[49m[33;43m'[39;49m[33;43mtutoriel/data/prd/Prev_E_20190103_0819_20190103_0913.xml[39;49m[33;43m'[39;49m[43m][49m[43m,[49m[43m [49m[43mseek_issue_date[49m[43m=[49m[38;5;28;43;01mFalse[39;49;00m
+[32m      3[39m [43m)[49m
 
-[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\evalhyd\vigicrues\evaluate\evalp.py:254[39m, in [36mevalp[39m[34m(df_obs, df_prd, metrics, q_thr, events, c_lvl, t_msk, m_cdt, bootstrap, seed, diagnostics, return_format)[39m
-[32m    251[39m arr_prd = convert_prd_df_to_arr(df_prd)
-[32m    253[39m [38;5;66;03m# call evalhyd function[39;00m
-[32m--> [39m[32m254[39m res_as_arr = [43mevalhyd[49m[43m.[49m[43mevalp[49m[43m([49m
-[32m    255[39m [43m    [49m[43marr_obs[49m[43m,[49m[43m [49m[43marr_prd[49m[43m,[49m[43m [49m[43mmetrics[49m[43m,[49m
-[32m    256[39m [43m    [49m[43mq_thr[49m[43m,[49m[43m [49m[43mevents[49m[43m,[49m[43m [49m[43mc_lvl[49m[43m,[49m[43m [49m[43mt_msk[49m[43m,[49m[43m [49m[43mm_cdt[49m[43m,[49m
-[32m    257[39m [43m    [49m[43mbootstrap[49m[43m,[49m[43m [49m[43mdts[49m[43m,[49m[43m [49m[43mseed[49m[43m,[49m
-[32m    258[39m [43m    [49m[43mdiagnostics[49m
-[32m    259[39m [43m[49m[43m)[49m
-[32m    261[39m [38;5;66;03m# turn metrics and/or diagnostics into empty list if not provided[39;00m
-[32m    262[39m metrics = [] [38;5;28;01mif[39;00m metrics [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;28;01melse[39;00m metrics
+[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\evalhyd\vigicrues\read\xml.py:62[39m, in [36mread_prd_from_xml_sandre[39m[34m(xml_files, seek_issue_date)[39m
+[32m     58[39m df2 = [38;5;28;01mNone[39;00m
+[32m     60[39m [38;5;28;01mfor[39;00m xml_file [38;5;129;01min[39;00m xml_files:
+[32m     61[39m     [38;5;66;03m# read in XML Sandre file with `libhydro`[39;00m
+[32m---> [39m[32m62[39m     d = [43mMessage[49m[43m.[49m[43mfrom_file[49m[43m([49m[43mxml_file[49m[43m)[49m
+[32m     64[39m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m d.simulations:
+[32m     65[39m         [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m(
+[32m     66[39m             [33mf[39m[33m"[39m[33mLe fichier [39m[38;5;132;01m{[39;00mxml_file[38;5;132;01m}[39;00m[33m ne contient [39m[33m"[39m
+[32m     67[39m             [33mf[39m[33m"[39m[33mpas de series de simulations[39m[33m"[39m
+[32m     68[39m         )
 
-[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\evalhyd\evalp.py:76[39m, in [36mevalp[39m[34m(q_obs, q_prd, metrics, q_thr, events, c_lvl, q_lvl, t_msk, m_cdt, bootstrap, dts, seed, diagnostics)[39m
-[32m     73[39m     [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
-[32m     74[39m         [38;5;28;01mpass[39;00m
-[32m---> [39m[32m76[39m [38;5;28;01mreturn[39;00m [43m_evalp[49m[43m([49m[43m*[49m[43m*[49m[43mkwargs[49m[43m)[49m
+[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\libhydro\conv\xml\_xml.py:200[39m, in [36mMessage.from_file[39m[34m(src, ordered)[39m
+[32m    187[39m [38;5;129m@staticmethod[39m
+[32m    188[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mfrom_file[39m(src, ordered=[38;5;28;01mFalse[39;00m):
+[32m    189[39m [38;5;250m    [39m[33;03m"""Parse le fichier src et retourne un xml.Message.[39;00m
+[32m    190[39m 
+[32m    191[39m [33;03m    Supprime les eventuels namespaces.[39;00m
+[32m   (...)[39m[32m    198[39m 
+[32m    199[39m [33;03m    """[39;00m
+[32m--> [39m[32m200[39m     [38;5;28;01mreturn[39;00m Message(**[43m_xml_parser[49m[43m.[49m[43mparse_xml_file[49m[43m([49m[43msrc[49m[43m)[49m)
 
-[31mTypeError[39m: _evalp(): incompatible function arguments. The following argument types are supported:
-    1. (q_obs: numpy.ndarray[numpy.float64], q_prd: numpy.ndarray[numpy.float64], metrics: list[str], q_thr: numpy.ndarray[numpy.float64] = array([], shape=(0, 0), dtype=float64), events: Optional[str] = None, c_lvl: list[float] = [], q_lvl: list[float] = [], t_msk: numpy.ndarray[bool] = array([], shape=(0, 0, 0, 0), dtype=bool), m_cdt: numpy.ndarray[S32] = array([], shape=(0, 0), dtype='|S32'), bootstrap: Optional[dict[str, int]] = None, dts: list[str] = [], seed: Optional[int] = None, diagnostics: Optional[list[str]] = None) -> list[numpy.ndarray[numpy.float64]]
+[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\libhydro\conv\xml\xml_parser.py:28[39m, in [36mparse_xml_file[39m[34m(src)[39m
+[32m     25[39m parser = _etree.XMLParser(
+[32m     26[39m     remove_blank_text=[38;5;28;01mTrue[39;00m, remove_comments=[38;5;28;01mTrue[39;00m, ns_clean=[38;5;28;01mTrue[39;00m)
+[32m     27[39m tree = _etree.parse(src, parser=parser)
+[32m---> [39m[32m28[39m [38;5;28;01mreturn[39;00m [43m_parse_tree[49m[43m([49m[43mtree[49m[43m)[49m
 
-Invoked with: kwargs: q_obs=array([[127. , 126. , 126. , 128. , 130. , 131. , 132. , 132. , 131. ,
-        131. , 130. , 130. , 129. , 128. , 128. , 127. , 126. , 125. ,
-        125. , 124. , 123. , 123. , 122. , 121. , 121. , 120. , 119. ,
-        118. , 118. , 117. , 116. , 116. , 115. , 115. , 115. , 114. ,
-        114. , 113. , 113. , 111. , 107. , 104. , 101. ,  99.8,  98.7,
-         98.2,  97.5,  97.1,  96.7,  96.1,  95.6,  95.3,  94.8,  94.4,
-         93.8,  93.1,  92.6,  92. ,  91.4,  90.9,  90.4,  90.3,  90.3,
-         90.2,  89.7,  89.4,  88.9,  88.6,  88. ,  87.5,  87.3,  86.9,
-         86.5,  86.3,  86.1,  85.9,  85.7,  85.5,  85.3,  85.1,  84.9,
-         84.8,  84.6,  84.3,  84.2,  84.1,  84.4,  85.5,  87.1,  89. ,
-         90.7,  92.1,  93.2,  93.7,  93.9,  94. ,  94.4,  96.2, 101. ,
-        107. , 113. , 116. , 117. , 117. , 118. , 118. , 118. , 118. ,
-        118. , 118. , 118. , 118. , 117. , 117. , 116. , 115. , 115. ,
-        116. , 116. ],
-       [254. , 250. , 248. , 245. , 243. , 241. , 241. , 240. , 240. ,
-        240. , 239. , 238. , 237. , 236. , 234. , 232. , 231. , 229. ,
-        228. , 227. , 225. , 223. , 222. , 221. , 219. , 218. , 216. ,
-        215. , 214. , 212. , 208. , 206. , 205. , 203. , 202. , 201. ,
-        200. , 199. , 198. , 197. , 196. , 194. , 192. , 190. , 188. ,
-        185. , 182. , 180. , 178. , 177. , 175. , 174. , 174. , 173. ,
-        172. , 170. , 169. , 168. , 167. , 166. , 165. , 164. , 163. ,
-        162. , 161. , 160. , 160. , 159. , 158. , 158. , 157. , 156. ,
-        155. , 155. , 154. , 153. , 153. , 153. , 152. , 151. , 151. ,
-        150. , 149. , 149. , 148. , 148. , 147. , 146. , 145. , 145. ,
-        145. , 146. , 147. , 148. , 149. , 150. , 150. , 151. , 152. ,
-        151. , 152. , 154. , 157. , 162. , 166. , 169. , 170. , 171. ,
-        172. , 172. , 172. , 172. , 172. , 171. , 171. , 171. , 170. ,
-        169. , 168. ]]), q_prd=array([[[[ 96.5315,      nan,      nan, ...,      nan,      nan,
-               nan],
-         [109.    ,      nan,      nan, ...,      nan,      nan,
-               nan],
-         [120.3889,      nan,      nan, ...,      nan,      nan,
-               nan]],
+[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\libhydro\conv\xml\xml_parser.py:35[39m, in [36m_parse_tree[39m[34m(tree)[39m
+[32m     33[39m _xml.remove_namespaces(tree)
+[32m     34[39m node = XMLNode(tree)
+[32m---> [39m[32m35[39m [38;5;28;01mreturn[39;00m [43m_parser[49m[43m.[49m[43mparse[49m[43m([49m[43mnode[49m[43m)[49m
 
-        [[     nan,  95.8804,      nan, ...,      nan,      nan,
-               nan],
-         [     nan, 108.4   ,      nan, ...,      nan,      nan,
-               nan],
-         [     nan, 119.8527,      nan, ...,      nan,      nan,
-               nan]],
+[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\libhydro\conv\xml\parser.py:36[39m, in [36mparse[39m[34m(root)[39m
+[32m     34[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mparse[39m(root):
+[32m     35[39m [38;5;250m    [39m[33;03m"""Parse a root Node"""[39;00m
+[32m---> [39m[32m36[39m     scenario = [43m_parse_scenario[49m[43m([49m[43mroot[49m[43m.[49m[43msubobj[49m[43m([49m[33;43m'[39;49m[33;43mScenario[39;49m[33;43m'[39;49m[43m)[49m[43m)[49m
+[32m     37[39m     refhyd = _parse_refhyd(root)
+[32m     38[39m     donnees = _parse_donnees(root)
 
-        [[     nan,      nan,  95.7058, ...,      nan,      nan,
-               nan],
-         [     nan,      nan, 108.3   , ...,      nan,      nan,
-               nan],
-         [     nan,      nan, 119.8333, ...,      nan,      nan,
-               nan]],
+[36mFile [39m[32mD:\miniforge3\envs\evalhyd-vigicrues-dev\Lib\site-packages\libhydro\conv\xml\parser.py:107[39m, in [36m_parse_scenario[39m[34m(scen)[39m
+[32m    105[39m version = scen.value([33m'[39m[33mVersionScenario[39m[33m'[39m)
+[32m    106[39m [38;5;28;01mif[39;00m version [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m version < [33m'[39m[33m2[39m[33m'[39m:
+[32m--> [39m[32m107[39m     [38;5;28;01mraise[39;00m VersionError([33m'[39m[33mVersion must be present and higher than 2[39m[33m'[39m)
+[32m    108[39m [38;5;66;03m# emetteur pas de contacts si absence de balise CdContact[39;00m
+[32m    109[39m emetteur_contacts = [38;5;28;01mNone[39;00m
 
-        ...,
-
-        [[     nan,      nan,      nan, ...,  94.8816,      nan,
-               nan],
-         [     nan,      nan,      nan, ..., 143.5   ,      nan,
-               nan],
-         [     nan,      nan,      nan, ..., 188.3172,      nan,
-               nan]],
-
-        [[     nan,      nan,      nan, ...,      nan,  94.5928,
-               nan],
-         [     nan,      nan,      nan, ...,      nan, 143.3   ,
-               nan],
-         [     nan,      nan,      nan, ...,      nan, 188.1159,
-               nan]],
-
-        [[     nan,      nan,      nan, ...,      nan,      nan,
-           94.2076],
-         [     nan,      nan,      nan, ...,      nan,      nan,
-          143.1   ],
-         [     nan,      nan,      nan, ...,      nan,      nan,
-          187.8139]]],
-
-
-       [[[244.6189,      nan,      nan, ...,      nan,      nan,
-               nan],
-         [253.9   ,      nan,      nan, ...,      nan,      nan,
-               nan],
-         [261.5343,      nan,      nan, ...,      nan,      nan,
-               nan]],
-
-        [[     nan, 241.5651,      nan, ...,      nan,      nan,
-               nan],
-         [     nan, 251.    ,      nan, ...,      nan,      nan,
-               nan],
-         [     nan, 258.7943,      nan, ...,      nan,      nan,
-               nan]],
-
-        [[     nan,      nan, 238.7271, ...,      nan,      nan,
-               nan],
-         [     nan,      nan, 248.3   , ...,      nan,      nan,
-               nan],
-         [     nan,      nan, 256.2533, ...,      nan,      nan,
-               nan]],
-
-        ...,
-
-        [[     nan,      nan,      nan, ..., 140.5634,      nan,
-               nan],
-         [     nan,      nan,      nan, ..., 201.5   ,      nan,
-               nan],
-         [     nan,      nan,      nan, ..., 262.3933,      nan,
-               nan]],
-
-        [[     nan,      nan,      nan, ...,      nan, 140.5585,
-               nan],
-         [     nan,      nan,      nan, ...,      nan, 201.5   ,
-               nan],
-         [     nan,      nan,      nan, ...,      nan, 262.3933,
-               nan]],
-
-        [[     nan,      nan,      nan, ...,      nan,      nan,
-          140.5569],
-         [     nan,      nan,      nan, ...,      nan,      nan,
-          201.5   ],
-         [     nan,      nan,      nan, ...,      nan,      nan,
-          262.3933]]]]), metrics=['QS', 'CR', 'AW', 'AWN', 'WS', 'RANK_HIST'], c_lvl=array([80]), bootstrap=array(['2024-12-11 07:00:00', '2024-12-11 08:00:00',
-       '2024-12-11 09:00:00', '2024-12-11 10:00:00',
-       '2024-12-11 11:00:00', '2024-12-11 12:00:00',
-       '2024-12-11 13:00:00', '2024-12-11 14:00:00',
-       '2024-12-11 15:00:00', '2024-12-11 16:00:00',
-       '2024-12-11 17:00:00', '2024-12-11 18:00:00',
-       '2024-12-11 19:00:00', '2024-12-11 20:00:00',
-       '2024-12-11 21:00:00', '2024-12-11 22:00:00',
-       '2024-12-11 23:00:00', '2024-12-12 00:00:00',
-       '2024-12-12 01:00:00', '2024-12-12 02:00:00',
-       '2024-12-12 03:00:00', '2024-12-12 04:00:00',
-       '2024-12-12 05:00:00', '2024-12-12 06:00:00',
-       '2024-12-12 07:00:00', '2024-12-12 08:00:00',
-       '2024-12-12 09:00:00', '2024-12-12 10:00:00',
-       '2024-12-12 11:00:00', '2024-12-12 12:00:00',
-       '2024-12-12 13:00:00', '2024-12-12 14:00:00',
-       '2024-12-12 15:00:00', '2024-12-12 16:00:00',
-       '2024-12-12 17:00:00', '2024-12-12 18:00:00',
-       '2024-12-12 19:00:00', '2024-12-12 20:00:00',
-       '2024-12-12 21:00:00', '2024-12-12 22:00:00',
-       '2024-12-12 23:00:00', '2024-12-13 00:00:00',
-       '2024-12-13 01:00:00', '2024-12-13 02:00:00',
-       '2024-12-13 03:00:00', '2024-12-13 04:00:00',
-       '2024-12-13 05:00:00', '2024-12-13 06:00:00',
-       '2024-12-13 07:00:00', '2024-12-13 08:00:00',
-       '2024-12-13 09:00:00', '2024-12-13 10:00:00',
-       '2024-12-13 11:00:00', '2024-12-13 12:00:00',
-       '2024-12-13 13:00:00', '2024-12-13 14:00:00',
-       '2024-12-13 15:00:00', '2024-12-13 16:00:00',
-       '2024-12-13 17:00:00', '2024-12-13 18:00:00',
-       '2024-12-13 19:00:00', '2024-12-13 20:00:00',
-       '2024-12-13 21:00:00', '2024-12-13 22:00:00',
-       '2024-12-13 23:00:00', '2024-12-14 00:00:00',
-       '2024-12-14 01:00:00', '2024-12-14 02:00:00',
-       '2024-12-14 03:00:00', '2024-12-14 04:00:00',
-       '2024-12-14 05:00:00', '2024-12-14 06:00:00',
-       '2024-12-14 07:00:00', '2024-12-14 08:00:00',
-       '2024-12-14 09:00:00', '2024-12-14 10:00:00',
-       '2024-12-14 11:00:00', '2024-12-14 12:00:00',
-       '2024-12-14 13:00:00', '2024-12-14 14:00:00',
-       '2024-12-14 15:00:00', '2024-12-14 16:00:00',
-       '2024-12-14 17:00:00', '2024-12-14 18:00:00',
-       '2024-12-14 19:00:00', '2024-12-14 20:00:00',
-       '2024-12-14 21:00:00', '2024-12-14 22:00:00',
-       '2024-12-14 23:00:00', '2024-12-15 00:00:00',
-       '2024-12-15 01:00:00', '2024-12-15 02:00:00',
-       '2024-12-15 03:00:00', '2024-12-15 04:00:00',
-       '2024-12-15 05:00:00', '2024-12-15 06:00:00',
-       '2024-12-15 07:00:00', '2024-12-15 08:00:00',
-       '2024-12-15 09:00:00', '2024-12-15 10:00:00',
-       '2024-12-15 11:00:00', '2024-12-15 12:00:00',
-       '2024-12-15 13:00:00', '2024-12-15 14:00:00',
-       '2024-12-15 15:00:00', '2024-12-15 16:00:00',
-       '2024-12-15 17:00:00', '2024-12-15 18:00:00',
-       '2024-12-15 19:00:00', '2024-12-15 20:00:00',
-       '2024-12-15 21:00:00', '2024-12-15 22:00:00',
-       '2024-12-15 23:00:00', '2024-12-16 00:00:00',
-       '2024-12-16 01:00:00', '2024-12-16 02:00:00',
-       '2024-12-16 03:00:00', '2024-12-16 04:00:00',
-       '2024-12-16 05:00:00'], dtype=object)
+[31mVersionError[39m: Version must be present and higher than 2
 

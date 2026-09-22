@@ -47,7 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/functions/evalhyd.vigicrues.read_obs_from_xml_sandre';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://hydrogr.github.io/evalhyd-vigicrues/_static/switcher.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.1.0-beta';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'v0.1.0-rc2';
         </script>
     <link rel="canonical" href="https://hydrogr.github.io/evalhyd-vigicrues/api/functions/evalhyd.vigicrues.read_obs_from_xml_sandre.html" />
     <link rel="icon" href="../../_static/evalhyd_favicon.ico"/>
@@ -131,7 +131,7 @@
 document.write(`
   <div class="version-switcher__container dropdown">
     <button type="button" class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle" data-bs-toggle="dropdown">
-      v0.1.0-beta  <!-- this text may get changed later by javascript -->
+      v0.1.0-rc2  <!-- this text may get changed later by javascript -->
       <span class="caret"></span>
     </button>
     <div class="version-switcher__menu dropdown-menu list-group-flush py-0">
@@ -226,7 +226,7 @@ document.write(`
           
           
           
-          <a href="https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
+          <a href="https://forge.inrae.fr/hydroGR/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
             <label class="sr-only">GitLab</label></a>
         </li>
 </ul></div>
@@ -335,7 +335,7 @@ document.write(`
           
           
           
-          <a href="https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
+          <a href="https://forge.inrae.fr/hydroGR/evalhyd" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-gitlab"></i></span>
             <label class="sr-only">GitLab</label></a>
         </li>
 </ul></div>
@@ -428,7 +428,7 @@ de débits et retourner sous forme de <code class="xref py py-obj docutils liter
 <dl class="field-list simple">
 <dt class="field-odd">Paramètres<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt>xml_files: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>La liste de fichiers au format XML-SANDRE contenant les
+<dt>xml_files: <a class="reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a></dt><dd><p>La liste de fichiers au format XML-SANDRE contenant les
 observations de débits.</p>
 </dd>
 </dl>
@@ -443,20 +443,20 @@ observations de débits.</p>
 <p><strong>Exemples</strong></p>
 <p>Récupérer les observations de débits sous forme de dataframe :</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">read_obs_from_xml_sandre</span><span class="p">([</span><span class="s1">&#39;data/export_hydro_series.xml&#39;</span><span class="p">])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
 <span class="go">                            valeur</span>
 <span class="go">entite     date_validite</span>
-<span class="go">H5201010   2010-01-01     165549.0</span>
-<span class="go">           2010-01-02     183860.0</span>
-<span class="go">           2010-01-03     186781.0</span>
-<span class="go">           2010-01-04     165038.0</span>
-<span class="go">           2010-01-05     130174.0</span>
+<span class="go">H5071010   2010-01-01      93693.0</span>
+<span class="go">           2010-01-02      80864.0</span>
+<span class="go">           2010-01-03      52782.0</span>
+<span class="go">           2010-01-04      27480.0</span>
+<span class="go">           2010-01-05      14536.0</span>
 <span class="go">...                            ...</span>
-<span class="go">H507101002 2019-12-28     111972.0</span>
-<span class="go">           2019-12-29     112633.0</span>
-<span class="go">           2019-12-30      97809.0</span>
-<span class="go">           2019-12-31      92378.0</span>
-<span class="go">           2020-01-01      72622.0</span>
+<span class="go">H520101003 2019-12-28     225984.0</span>
+<span class="go">           2019-12-29     234587.0</span>
+<span class="go">           2019-12-30     239660.0</span>
+<span class="go">           2019-12-31     239742.0</span>
+<span class="go">           2020-01-01     237647.0</span>
 
 <span class="go">[18039 rows x 1 columns]</span>
 </pre></div>
@@ -510,7 +510,7 @@ observations de débits.</p>
         <div class="footer-item">
   <p class="copyright">
     
-      © Copyright 2025, INRAE.
+      © Copyright 2025-2026, INRAE.
       <br/>
     
   </p>
@@ -524,7 +524,7 @@ observations de débits.</p>
 </div>
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Jun 24, 2025.
+  Last updated on Sep 22, 2026.
   <br/>
 </p></div>
       
